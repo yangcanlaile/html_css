@@ -1,0 +1,57 @@
+
+body{
+	margin: 0;
+	padding: 0;
+
+}
+.wrapper{
+	width:960px;
+	margin: 0 auto;
+
+}
+
+.content{
+	overflow: hidden;
+}
+
+.content .primary{
+	float: right;
+}
+
+.content .secondary{
+
+	float: left;
+}
+
+.content .primary .primary{
+	width: 400px;
+	float: left;
+	display: inline;
+
+}
+
+.content .primary .secondary{
+	width: 230px;
+	float: right;
+	display: inline;
+
+}
+
+
+
+
+
+
+
+
+.header{
+	height: 80px;
+	padding-left: 10px;
+	padding-top:10px;
+	background-color: #7272c3;
+}
+
+.footer{
+	height: 100px;
+	background-color: #d6d68d;
+}
