@@ -1,0 +1,54 @@
+
+
+
+body{
+	margin: 0;
+	padding: 0;
+
+}
+
+
+.content{
+	overflow: hidden;
+}
+
+
+
+
+.content .primary .primary{
+	
+	float: left;
+	display: inline;
+
+}
+
+.content .primary .secondary{
+	
+	float: right;
+	display: inline;
+
+}
+
+
+.wrapper {
+
+	width: 76.8%;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.content .primary{
+	width: 72.82%;
+	float: right;
+	display: inline;
+
+}
+
+
+.content .secondary {
+
+	width: 24%;
+	float: left;
+	display: inline;
+}
+
