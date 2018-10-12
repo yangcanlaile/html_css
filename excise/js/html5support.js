@@ -24,8 +24,6 @@ function hello() {
     if(!Modernizr.geolocation) {
     	alert("不支持地理位置!")
     }
-
-
 }
 
 
