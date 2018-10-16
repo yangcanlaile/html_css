@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/canvas.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$('#testButton').click(function(){
+				var result = $('[name=you]:checked').val();
+				$('#result').html('you have choice the ' + result);
+
+			})
+
+
+		})
+
+	</script>
+</head>
+<body>
+
+	<div>
+		What is your answer? 
+		<input type="radio" name="you" value="Yes"><label>Yes</label>
+		<input type="radio" name="you" value="No"><label>No</label>
+		<input type="radio" name="you" value="Maybe"><label>Maybe</label>
+		<input type="radio" name="you" value="I dunno"><label>I dunno</label>
+		
+	</div>
+	<button type="button" id="testButton">Which?</button>
+	<div id="result"></div>
+</body>
+</html>
