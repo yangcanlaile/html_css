@@ -11,23 +11,17 @@
 			$('#testButton').click(function(){
 				var result = $('[name=you]:checked').val();
 				$('#result').html('you have choice the ' + result);
-
 			})
-
-
 		})
-
 	</script>
 </head>
 <body>
-
 	<div>
 		What is your answer? 
 		<input type="radio" name="you" value="Yes"><label>Yes</label>
 		<input type="radio" name="you" value="No"><label>No</label>
 		<input type="radio" name="you" value="Maybe"><label>Maybe</label>
 		<input type="radio" name="you" value="I dunno"><label>I dunno</label>
-		
 	</div>
 	<button type="button" id="testButton">Which?</button>
 	<div id="result"></div>
