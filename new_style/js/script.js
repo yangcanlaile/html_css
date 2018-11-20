@@ -143,15 +143,34 @@ $(document).ready(function() {
 
     $(".e-button").on("click", function() {
         if ($(this).hasClass("open")) {
+
+            var e_button = $(".e-button i");
+
             $(".e-list").slideUp(function() {
                 $(".e-button").removeClass("open");
             });
+            if(e_button.hasClass("fa-angle-up")) {
+                e_button.removeClass("fa-angle-up");
+                e_button.addClass("fa-angle-down")
+            }
         } else {
             $(this).addClass("open");
+
+            var e_button = $(".e-button i");
             setTimeout(function() {
                 $(".e-list").stop().slideDown();
             }, 200);
+             if(e_button.hasClass("fa-angle-down")) {
+                e_button.removeClass("fa-angle-down");
+                e_button.addClass("fa-angle-up")
+            }
         }
+    });
+    //产品旋转模型加载
+    $("#myCar").vc3dEye({
+        imagePath:"img/V300/",
+        totalImages:38,
+        imageExtension:"png"
     });
 
 });
