@@ -1,61 +1,94 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Bootstrap 模板</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 引入 Bootstrap -->
-    <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
-    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
-    <!--[if lt IE 9]>          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>       <![endif]-->
-    <link rel="stylesheet" type="text/css" href="css/testbootstrap.css">
-    <style type="text/css">
-       .warn{
-
-         color: #f3f903;
-       }
-
-
-
-       
-
-    </style>
-    <link rel="stylesheet" type="text/css" href="css/">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]-->
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
+    <!--[endif]-->
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="bootstrap-3.3.5/dist/css/bootstrap.min.css" />
 </head>
 
 <body>
-    <div class="container">
-       <div class="row">
-            <div class="col-md-6" style="background-color: #38C64E;">
-               
-
-            </div>
-            <div class="col-md-6" style="background-color: #dedef8;">
-               
-
-            </div>
-
-            <div class="col-md-6"></div>
-
-       </div>  
-
-
-    </div>
-
-
-
-
-
-
-
-
-    <img src="img/timg.jpg" class="img-rep" alt="响应式图像">
-
-    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <div class="container" style="padding:50px">
+        <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+            <li class="active"><a href="#tab-chrome"data-toggle="tab"role="tab">Chrome</a></li>
+            <li><a href="#tab-firefox"data-toggle="tab"role="tab">Firefox</a></li>
+            <li><a href="#tab-safari"data-toggle="tab"role="tab">Safari</a></li>
+            <li><a href="#tab-opera"data-toggle="tab"role="tab">Opera</a></li>
+            <li><a href="#tab-ie"data-toggle="tab"role="tab">IE</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="tab-chrome" class="tab-pane active">
+                <div class="row feature">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">Google Chrome<span class="text-muted">使用最广的浏览器</span></h2>
+                        <p class="lead">Google Chrome，又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。
+                            该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="Images/chrome-logo.jpg"alt="chrome-logo" />
+</div>
+                    </div>
+                </div>
+                <div id="tab-firefox" class="tab-pane">
+                    <div class="row feature">
+                        <div class="col-md-7">
+                            <h2 class="featurette-heading">Mozilla Firefox<sap class="text-muted">美丽的狐狸</sap></h2>
+                            <p class="lead">Mozilla Firefox，中文名通常称为“火狐”或“火狐浏览器”，是一个开源网页浏览器，
+                                使用Gecko引擎（非ie内核），支持多种操作系统如Windows、Mac和linux。</p>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="Images/firefox-logo.jpg"alt="firefox-logo" />
+</div>
+                        </div>
+                    </div>
+                    <div id="tab-safari" class="tab-pane">
+                        <div class="row feature">
+                            <div class="col-md-7">
+                                <h2 class="featurette-heading">Safari<span class="text-muted">Mac用户首选</span></h2>
+                                <p class="lead">Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。
+                                    Safari在2003年1月7日首度发行测试版，并成为Mac OS X v10.3与之后的默认浏览器，也是iPhone与IPAD和iPod touch的指定浏览器。</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="Images/safari-logo.jpg"alt="safari-logo" />
+</div>
+                            </div>
+                        </div>
+                        <div id="tab-opera" class="tab-pane">
+                            <div class="row feature">
+                                <div class="col-md-7">
+                                    <h2 class="featurette-heading">Opera<span class="text-muted">小众但易用</span></h2>
+                                    <p class="lead">Opera浏览器，是一款挪威Opera Software ASA公司制作的支持多页面标签式浏览的网络浏览器。
+                                        是跨平台浏览器可以在Windows、Mac和Linux三个操作系统平台上运行。.</p>
+                                </div>
+                                <div class="col-md-5">
+                                    <img src="Images/opera-logo.jpg"alt="opear-logo" />
+</div>
+                                </div>
+                            </div>
+                            <div id="tab-ie" class="tab-pane">
+                                <div class="row feature">
+                                    <div class="col-md-7">
+                                        <h2 class="featurette-heading">IE<span class="text-muted">对新的Html5元素兼容性不是很好，你懂的。</span></h2>
+                                        <p class="lead">Internet Explorer，原称Microsoft Internet Explorer(6版本以前)和Windows Internet
+                                            Explorer(7，8，9，10版本)，
+                                            简称IE，是美国微软公司推出的一款网页浏览器。它采用的排版引擎(俗称内核)为Trident。</p>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <img src="Images/ie-logo.jpg"alt="ie-logo" />
+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script src="jQuery/jquery-2.1.4.js"></script>
+                        <script src="bootstrap-3.3.5/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

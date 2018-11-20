@@ -37,7 +37,8 @@ def GetMecared(qq, gtk, headers):
 
 
 # 获得我关心谁/谁关心我信息
-def GetCared(qq, gtk, headers, savefile='./results/cared.list'):
+def GetCared(qq, gtk, headers, savefile='./results'):
+	savefile = os.path.join(savefile, qq, 'cared.list')
 	Caredme = GetCaredme(qq, gtk, headers)
 	friend1 = re.findall(r'"uin":(.*?),', str(Caredme))
 	Mecared = GetMecared(qq, gtk, headers)
@@ -61,9 +62,58 @@ def GetCared(qq, gtk, headers, savefile='./results/cared.list'):
 	print('[INFO]: Get care and cared successfully, save to %s...' % savefile)
 
 
+# 爬取好友信息
+def DownloadFriendsInfo(qq, t_qq, gtk, headers, faillog='./results'):
+	url = 'https://h5.qzone.qq.com/proxy/domain/base.qzone.qq.com/cgi-bin/user/cgi_userinfo_get_all?uin={}&vuin={}&fupdate=1&g_tk={}'
+	url = url.format(t_qq, qq, gtk)
+	res = requests.get(url, headers=headers)
+	status = res.status_code
+	if status != 200:
+		print('[Error]: Fail to get %s info in <QQ_Spider - GetMecared func>...' % str(t_qq))
+		f = open(os.path.join(faillog, '{}.fail'.format(qq)), 'a')
+		f.write(str(t_qq) + '\n')
+		f.close()
+		return None
+	content = res.content
+	content = content.decode('ascii', 'ignore')
+	SaveHtml(content, './results/{}'.format(qq), '{}_info.txt'.format(t_qq))
+	return content
+
+
+# 获取所有好友信息
+def GetAllFriendsInfo(qq, friends):
+	friendsInfoDict = {}
+	for friend in friends:
+		infoDict = ParseFriendsInfo(qq, friend, datafile='./results')
+		if infoDict is not None:
+			friendsInfoDict[friend] = infoDict
+	return friendsInfoDict
+
+
 
 if __name__ == '__main__':
-	username = QQ number
-	password = QQ password
+	username = "492573329"
+	password = "YangCan8632092"
 	qq, gtk, headers = cookie.get(username, password)
 	GetCared(qq, gtk, headers)
+	friends = ReadCared(os.path.join('./results', qq, 'cared.list'))
+	print('[INFO]: Start to download info of %d friends...' % len(friends))
+	for friend in friends:
+		DownloadFriendsInfo(qq, friend, gtk, headers)
+	
+
+	friendsInfoDict = GetAllFriendsInfo(qq, friends)
+	'''
+	# 性别分析
+	boy, girl, other = CountSex(friendsInfoDict)
+	data = [['boy', 'girl', 'other'], [boy, girl, other]]
+	DrawPie(data, piename='QQ好友男女比')
+	'''
+	'''
+	# 年龄分析
+	data = CountAge(friendsInfoDict)
+	DrawBar(data, barname='QQ好友年龄分布')
+	'''
+	# 地区分布分析
+	data = CountArea(friendsInfoDict, 'province')
+	DrawMap(data, mapname='QQ好友区域分布')

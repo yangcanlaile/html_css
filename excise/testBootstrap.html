@@ -8,37 +8,153 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </style>
+    <style type="text/css">
+    .mytab .nav-tabs {
+        border-bottom: 0;
+    }
+
+    .mytab .nav-tabs .tab {
+        border-bottom: 0;
+    }
+
+    .mytab {
+        width: 100%;
+        background-color: #ededed;
+        border: none;
+    }
+
+
+
+    .mytab .fatab {
+        border: none;
+        width: 200px;
+    }
+
+
+
+    .mytab .nav li: hover .mytab .nav li a:hover {
+        background-color: red;
+    }
+
+
+    .mytab .nav-tabs>li>a,
+    .mytab .nav-tabs>li,
+        {
+        border: none;
+        background-color: #ededed;
+
+    }
+
+    .mytab .nav li {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:2px;
+    }
+
+    .mytab .nav li a {
+        border: none;
+        background-color: #ededed;
+        display: inline-block;
+    }
+
+
+    .mytab .nav-tabs>li.active>a,
+    .mytab .nav-tabs>li.active>a:focus,
+    .mytab .nav-tabs>li.active>a:hover {
+        border: none;
+        background-color: #ededed;
+
+    }
+
+    .mytab .nav-tabs>li.active,
+    .mytab .nav-tabs>li.active:focus,
+    .mytab .nav-tabs>li.active:hover {
+
+        border-bottom: 2px solid black;
+
+
+    }
+
+    @media only screen and (max-width: 700px) {
+        .mytab .fatab{
+            width:100%;
+            
+        }
+        
+       
+
+
+   
+
+    }
+
+    
+    </style>
 </head>
 
 <body>
+    <div class="mytab">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="margin: 0 auto;">
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="fatab ">
+                            <a data-toggle="tab" href="#home">
+                                 <i class="fa fa-list" aria-hidden="true"></i>
+                                <span>特征</span>
+                            </a>
+                        </li>
+                        <li class="fatab ">
+                            <a data-toggle="tab" href="#java">
+                                <i class="fa fa-sitemap" aria-hidden="true"></i>
+                                <span>设备规格</span>
+                            </a>
+                        </li>
+                        <li class="fatab col-md-4 col-xs-12">
+                            <a data-toggle="tab" href="#ios">
+                                <i class="fa fa-cog" aria-hidden="true"></i>
+                                <span>系统配置</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade in active col" id="home">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-6 col-xs-12">I love you </div>
+                                    <div class="col-md-4 col-sm-6 col-xs-12">I love you </div>
+                                    <div class="col-md-4 col-sm-6 col-xs-12">I love you </div>
+                                    <div class="col-md-4 col-sm-6 col-xs-12">I love you </div>
+                                    <div class="col-md-4 col-sm-6 col-xs-12">I love you </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in " id="java">
+                                This is java</br>
+                                This is java</br>
+                            </div>
+                            <div class="tab-pane fade in " id="ios">
+                                This is ios</br>
+                                This is home</br>
+                                This is home</br>
+                                This is home</br>
+                                This is home</br>
+                            </div>
+                        
 
-    <div>
-        <ul class="nav nav-tabs" id="myTab">
-            <li ><a data-toggle="tab" href="#home">Home</a></li>
-            <li ><a data-toggle="tab" href="#java">Java</a></li>
-            <li ><a data-toggle="tab" href="#ios">IOS</a></li>
-        </ul>
-
-        <div id="myTabContent" class="tab-content">
-            <div class="tab-pane fade in active" id="home">
-                This is home 
+                    </div>
+                    
+                </div>
             </div>
-            <div class="tab-pane fade in active" id="java">
-                This is java
-            </div>
-            <div class="tab-pane fade in active" id="ios">
-                This is ios
-            </div>
-
         </div>
-
     </div>
-   
     <script type="text/javascript">
     $(function() {
 
