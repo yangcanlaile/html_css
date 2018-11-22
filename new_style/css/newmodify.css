@@ -69,7 +69,6 @@ h3 {
 }
 
 .product-item:nth-child(2) li a:hover {
-    
     color: #2294ea;
 
 }
@@ -245,11 +244,8 @@ h3 {
     opacity: 1;
 }
 .m-dropdown .e-button li{
-    
     margin-right: 1em;
 }
-
-
 .m-dropdown .e-list {
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -293,9 +289,86 @@ h3 {
 }
 .e-list {
     display: none;
-
 }
-
 .m-dropdown .e-list li  {
     padding: 10px;
 }
+
+
+/*产品页面*/
+.mytab .nav-tabs {
+        border-bottom: 0;
+    }
+
+    .mytab .nav-tabs .tab {
+        border-bottom: 0;
+    }
+
+    .mytab {
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        background-color: #ededed;
+        border: none;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .mytab .fatab
+    {
+        border: none;
+        width:380px;
+    }
+
+    .mytab .nav li: hover .mytab .nav li a:hover {
+        background-color: red;
+    }
+
+
+    .mytab .nav-tabs>li>a,
+    .mytab .nav-tabs>li,
+        {
+        border: none;
+        background-color: #ededed;
+
+    }
+
+    .mytab .nav li {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px;
+    }
+
+    .mytab .nav li a {
+        border: none;
+        background-color: #ededed;
+        display: inline-block;
+    }
+
+
+    .mytab .nav-tabs>li.active>a,
+    .mytab .nav-tabs>li.active>a:focus,
+    .mytab .nav-tabs>li.active>a:hover {
+        
+        background-color: #ededed;
+
+    }
+
+    .mytab .nav-tabs>li.active,
+    .mytab .nav-tabs>li.active:focus,
+    .mytab .nav-tabs>li.active:hover {
+
+        border-bottom: 2px solid black;
+    }
+    @media only screen and (max-width: 1200px) {
+        .mytab .fatab {
+            width:280px;
+        }
+    }
+
+   @media only screen and (max-width: 1000px) {
+        .mytab .fatab {
+            width: 100%;
+        }
+    }
+

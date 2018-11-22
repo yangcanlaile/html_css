@@ -9,10 +9,12 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.css">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../new_style/js/lib/swiper.min.js"></script>
     </style>
     <style type="text/css">
     .mytab .nav-tabs {
@@ -25,18 +27,17 @@
 
     .mytab {
         width: 100%;
+        font-family: 'Roboto', sans-serif;
         background-color: #ededed;
         border: none;
+        font-size: 14px;
+        font-weight: 300;
     }
-
-
-
-    .mytab .fatab {
+    .mytab .fatab
+    {
         border: none;
-        width: 200px;
+        width:380px;
     }
-
-
 
     .mytab .nav li: hover .mytab .nav li a:hover {
         background-color: red;
@@ -56,7 +57,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding:2px;
+        padding: 2px;
     }
 
     .mytab .nav li a {
@@ -79,24 +80,23 @@
     .mytab .nav-tabs>li.active:hover {
 
         border-bottom: 2px solid black;
-
-
     }
-
-    @media only screen and (max-width: 700px) {
-        .mytab .fatab{
-            width:100%;
-            
+    @media only screen and (max-width: 1200px) {
+        .mytab .fatab {
+            width:280px;
         }
-        
-       
-
-
-   
-
     }
 
-    
+   @media only screen and (max-width: 1000px) {
+        .mytab .fatab {
+            width: 100%;
+        }
+    }
+
+
+
+
+
     </style>
 </head>
 
@@ -106,51 +106,52 @@
             <div class="row">
                 <div class="col-md-12" style="margin: 0 auto;">
                     <ul class="nav nav-tabs" id="myTab">
-                        <li class="fatab ">
-                            <a data-toggle="tab" href="#home">
+                        <li class="fatab">
+                            <a data-toggle="tab" href="#features">
                                  <i class="fa fa-list" aria-hidden="true"></i>
                                 <span>特征</span>
                             </a>
                         </li>
-                        <li class="fatab ">
-                            <a data-toggle="tab" href="#java">
+                        <li class="fatab">
+                            <a data-toggle="tab" href="#conf">
                                 <i class="fa fa-sitemap" aria-hidden="true"></i>
                                 <span>设备规格</span>
                             </a>
                         </li>
-                        <li class="fatab col-md-4 col-xs-12">
-                            <a data-toggle="tab" href="#ios">
+                        <li class="fatab">
+                            <a data-toggle="tab" href="#specs">
                                 <i class="fa fa-cog" aria-hidden="true"></i>
                                 <span>系统配置</span>
                             </a>
                         </li>
                     </ul>
-                    
-                        <div id="myTabContent" class="tab-content">
-                            <div class="tab-pane fade in active col" id="home">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-xs-12">I love you </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12">I love you </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12">I love you </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12">I love you </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12">I love you </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade in " id="java">
-                                This is java</br>
-                                This is java</br>
-                            </div>
-                            <div class="tab-pane fade in " id="ios">
-                                This is ios</br>
-                                This is home</br>
-                                This is home</br>
-                                This is home</br>
-                                This is home</br>
-                            </div>
-                        
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade in active " id="features">
+                            
+                                <p>300 度沉浸式训练环境。</p>
+                                <p>贴近实战的射击训练场景。</p>
+                                <p>无缝高清视频。记录受训者的表现、判断及反应速度，并进行评判。</p>
+                                <p>超逼真的环绕立体声效果。</p>
+                                <p>多种枪械后座改装套件。</p>
+                                <p>一年保修和7*24小时全天候技术支持与服务。</p>
 
+                            
+                        </div>
+                        <div class="tab-pane  " id="conf">
+                           <img src="../new_style/img/new-img/V300_front.jpg">
+                            <img src="../new_style/img/new-img/V300_rear.jpg">
+                        </div>
+                        <div class="tab-pane  in " id="specs">
+                            <p>6 台电脑，英特尔处理器、高端显卡 、8GB 内存。</p>
+                            <p>服务器机架机箱。</p>
+                            <p>操作员双显示屏及背光键盘、鼠标。</p>
+                            <p>5 部 XGA DLP 投影机。</p>
+                            <p>5 套 10x7.5 英尺投影幕。</p>
+                            <p>5 套 有源扬声器。</p>
+                            <p>5 套千兆激光感应摄像机。</p>
+
+                        </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -159,6 +160,8 @@
     $(function() {
 
         $("#myTab li:eq(0) a").tab('show')
+
+
     })
     </script>
 </body>
