@@ -9,48 +9,51 @@
     <script type="text/javascript" src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <style type="text/css">
-    .dropdown-submenu {
-        position: relative;
-    }
+        .content-header {
 
-    .dropdown-submenu>.dropdown-menu {
-        top: 0;
-        left: 100%;
-        margin-top: -6px;
-        margin-left: -1px;
-        -webkit-border-radius: 0 6px 6px 6px;
-        -moz-border-radius: 0 6px 6px;
-        border-radius: 0 6px 6px 6px;
-    }
+    background-color: #3199c7;
+    height: 199px;
+    width: 800px;
+    font-size: 35px;
+    /*text-align: center;*/
+    position: relative;
+    margin: 0 auto;
 
-    .dropdown-submenu:hover>.dropdown-menu {
-        display: block;
-    }
+}
 
-  
+.content-header .title {
+    height: 100px;
+    width: 100px;
+    position: absolute; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 20px;
+    border: 1px solid black;
+    
+    color: white;
+ 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 150;
+}
+   
+
     </style>
 </head>
 
 <body>
-    
-           
-           <div class="e-button">
-               <li class="fd-up">123</li>
-               <li class="fd-down">321</li>
-           </div>
+   
+   <div class="content-header">
+       <div class="title">
+            我是要居中的 元素
 
-    
+       </div>
+
+   </div>
 </body>
 
 </html>
 <script type="text/javascript">
-        $(function(){
-            if($(".e-button li").hasClass("fd-down1") ){
-
-                alert("yes");
-            }else {
-                alert("no")
-            }
-
-        })
 </script>

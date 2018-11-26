@@ -3,6 +3,10 @@
     font-size: 36px;
 }
 
+body {
+    margin: 0;
+}
+
 h1,
 h2,
 h3,
@@ -14,18 +18,18 @@ h6 {
 }
 
 h2 {
-    font-size: 36px;
-    line-height: 1.4 font-weight:300;
+    font-family: 'Roboto', sns-serif;
+    line-height: 2.5;
+    font-weight: 500;
     letter-spacing: 0em;
 
 }
 
 h3 {
-
-    font-size: 24px;
-
+    font-family: 'Roboto', sns-serif;
+    font-size:24px;
     line-height: 1.4;
-    font-weight: 200;
+    font-weight: 300;
     letter-spacing: 0em;
 }
 
@@ -45,11 +49,12 @@ h3 {
 
 }
 
-.product-item .divide {
+.product-item img {
     display: block;
     border-top: 1px solid #e5e5e5;
-    margin-top: 3.5em;
-    margin-bottom: 3em;
+    padding-top: 2.5em;
+    padding-bottom: 2em;
+    margin: 0 auto;
 }
 
 .product-item:nth-child(2) {
@@ -58,7 +63,7 @@ h3 {
 
 }
 
-.product-item:nth-child(2) li a{
+.product-item:nth-child(2) li a {
     list-style: none;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
@@ -78,55 +83,129 @@ h3 {
 }
 
 
+section.content-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+section.content-intro {
+    width: 100%;
+}
+
+.section-full{
+
+    width: 100%;
+}
+
+.content-rv-father{
+    position: relative;
+
+}
+
+.content-rv-center{
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+/*******************
+******
+****** 内容
+ ******************/
+
+
+
+/*内容头部*/
+.content-header {
+
+    background-color: #d3e4c7;
+    height: 199px;
+    width: 100%;
+    font-size: 35px;
+    color: black;
+    /*text-align: center;*/
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.content-header .title {
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 20px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 150;
+}
+
+.content-header h2 {
+    color: black;
+    font-size: 30px;
+}
+
+
+
+
 /*下拉菜单样式*/
 
 
 .m-dropdown {
-    margin: 50px auto;
     width: 500px;
     display: block;
-
     font-size: 1.6rem;
     line-height: 22px;
-    margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
     background: white;
+    border-top: 1px solid #cccccc69;
+    border-bottom: 1px solid #cccccc69;
+    padding-bottom: 20px;
+
 }
+
 .m-dropdown .e-button {
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
+   
     transition: all 0.3s ease-in-out;
-    border-radius: 20px;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -ms-border-radius: 20px;
     font-size: 14px;
     font-size: 1.4rem;
     line-height: 20px;
-    padding: 5px 40px 5px 5px;
+    padding: 30px 40px 30px 5px;
     z-index: 900;
     color: black;
     font-weight: 900;
     position: relative;
-    border: 2px solid transparent;
     margin-top: 2px;
     font-family: "Open Sans", sans-serif;
     z-index: 5;
     display: block;
-    width: 12em;
+    width: 100%;
     background: white;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid #cccccc69;
+
+
 }
+
+
 .m-dropdown .e-button:hover {
     cursor: pointer;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);*/
+    background-color: #f7f5f5;
     color: black;
+
 }
-.m-dropdown .e-button:hover .e-burger span {
-    background: white;
-}
+
+
 .m-dropdown .e-button:after,
 .m-dropdown .e-button:before {
     display: block;
@@ -138,16 +217,19 @@ h3 {
     background: white;
     z-index: 0;
 }
+
 .m-dropdown .e-button:after {
     left: 100%;
     margin-left: 2px;
     border-bottom-left-radius: 10px;
 }
+
 .m-dropdown .e-button:before {
     right: 100%;
     margin-right: 2px;
     border-bottom-right-radius: 10px;
 }
+
 .m-dropdown .e-button .e-burger {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -167,7 +249,8 @@ h3 {
     transform-origin: center;
     z-index: -1;
 }
-/.m-dropdown .e-button .e-burger span {
+
+.m-dropdown .e-button .e-burger span {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
@@ -191,15 +274,18 @@ h3 {
     left: 0;
     transform-origin: center;
 }
+
 .m-dropdown .e-button .e-burger span:first-child {
     top: 0;
     transform: none;
 }
+
 .m-dropdown .e-button .e-burger span:last-child {
     top: auto;
     bottom: 0;
     transform: none;
 }
+
 .m-dropdown .e-button .e-burger:after {
     -webkit-transition: height 0.3s ease-in-out;
     -moz-transition: height 0.3s ease-in-out;
@@ -218,6 +304,7 @@ h3 {
     background: white;
     opacity: 0;
 }
+
 .m-dropdown .e-button.open {
     border-color: transparent;
     background: white;
@@ -225,33 +312,36 @@ h3 {
     border-bottom-right-radius: 0px;
     color: black;
 }
+
 .m-dropdown .e-button.open .e-burger span {
     background: white;
 }
+
 .m-dropdown .e-button.open .e-burger span:first-child {
     opacity: 0;
 }
+
 .m-dropdown .e-button.open .e-burger span:nth-child(2) {
     transform: translateY(-50%) rotate(-45deg);
 }
+
 .m-dropdown .e-button.open .e-burger span:nth-child(3) {
     transform: translateY(-50%) rotate(45deg);
 }
+
 .m-dropdown .e-button.open .e-burger span:last-child {
     opacity: 0;
 }
+
 .m-dropdown .e-button.open .e-burger:after {
     opacity: 1;
 }
-.m-dropdown .e-button li{
+
+.m-dropdown .e-button li {
     margin-right: 1em;
 }
+
 .m-dropdown .e-list {
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -ms-border-radius: 5px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     position: relative;
     width: 100%;
     margin: 0;
@@ -261,7 +351,11 @@ h3 {
     float: left;
     overflow: hidden;
     z-index: 999;
+    margin: 0 auto;
+    border-bottom: 1px solid #cccccc69;
+    margin-bottom: 10px;
 }
+
 .m-dropdown .e-list li {
     display: block;
     width: 100%;
@@ -269,9 +363,11 @@ h3 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.01);
     box-sizing: border-box;
 }
+
 .m-dropdown .e-list li:last-child {
     border: none;
 }
+
 .m-dropdown .e-list li a {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -287,88 +383,153 @@ h3 {
     box-sizing: border-box;
     font-size: 1em;
 }
-.e-list {
+
+.m-dropdown .e-list {
     display: none;
 }
-.m-dropdown .e-list li  {
+
+.m-dropdown .e-list li {
     padding: 10px;
+}
+
+.m-dropdown .e-list p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
 }
 
 
 /*产品页面*/
-.mytab .nav-tabs {
-        border-bottom: 0;
-    }
+.product-feature{
+   
+    background-color: #ededed;
+}
 
-    .mytab .nav-tabs .tab {
-        border-bottom: 0;
-    }
+.product-feature .mytab .nav-tabs,
+.product-feature .mytab .nav-tabs .tab{
+    border-bottom: 0;
+}
 
-    .mytab {
+
+
+.product-feature .mytab {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ededed;
+    border: none;
+    font-size: 14px;
+    font-weight: 300;
+
+}
+
+.product-feature  .mytab .fatab {
+    border: none;
+}
+
+.product-feature .tab-content{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.product-feature  .mytab .nav-tabs>li>a,
+.product-feature  .mytab .nav-tabs>li,
+{
+    border: none;
+    background-color: #ededed;
+    text-decoration: none;
+
+}
+
+.product-feature  .mytab .nav li {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.product-feature  .mytab .nav li a {
+    border: none;
+    background-color: #ededed;
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+.mytab .nav-tabs>li.active>a,
+.mytab .nav-tabs>li.active>a:focus,
+.mytab .nav-tabs>li.active>a:hover {
+
+    background-color: #ededed;
+
+
+}
+
+.mytab .nav-tabs>li.active,
+.mytab .nav-tabs>li.active:focus,
+.mytab .nav-tabs>li.active:hover {
+
+    border-bottom: 2px solid black;
+}
+
+@media (min-width: 1200px) {
+    .container {
         width: 100%;
-        font-family: 'Roboto', sans-serif;
-        background-color: #ededed;
-        border: none;
-        font-size: 14px;
-        font-weight: 300;
-    }
-    .mytab .fatab
-    {
-        border: none;
-        width:380px;
-    }
-
-    .mytab .nav li: hover .mytab .nav li a:hover {
-        background-color: red;
+        margin: 0;
+        padding: 0;
     }
 
 
-    .mytab .nav-tabs>li>a,
-    .mytab .nav-tabs>li,
-        {
-        border: none;
-        background-color: #ededed;
 
+}
+
+@media only screen and (max-width: 1200px) {
+    .mytab .fatab {
+        width: 280px;
     }
+}
 
-    .mytab .nav li {
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2px;
+@media only screen and (max-width: 1000px) {
+    .mytab .fatab {
+        width: 100%;
     }
+}
 
-    .mytab .nav li a {
-        border: none;
-        background-color: #ededed;
-        display: inline-block;
-    }
+.intro, .intro1 {
+    height: 190px;
+    width: 100%;
+    position: relative;
+    background-color: black;
 
+}
+.intro1 {
+    background-color: #005697;
+}
 
-    .mytab .nav-tabs>li.active>a,
-    .mytab .nav-tabs>li.active>a:focus,
-    .mytab .nav-tabs>li.active>a:hover {
-        
-        background-color: #ededed;
+.intro .in1,  .intro1 .in2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    max-width: 1200px;
+}
 
-    }
+.intro1 .in2 {
 
-    .mytab .nav-tabs>li.active,
-    .mytab .nav-tabs>li.active:focus,
-    .mytab .nav-tabs>li.active:hover {
+    font-size: 45px;
+    line-height: 1.4;
+    font-weight: 300;
+    letter-spacing: 0em;
+    max-width: 650px;
 
-        border-bottom: 2px solid black;
-    }
-    @media only screen and (max-width: 1200px) {
-        .mytab .fatab {
-            width:280px;
-        }
-    }
-
-   @media only screen and (max-width: 1000px) {
-        .mytab .fatab {
-            width: 100%;
-        }
-    }
-
+}

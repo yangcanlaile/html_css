@@ -159,7 +159,7 @@ $(document).ready(function() {
             var e_button = $(".e-button i");
             setTimeout(function() {
                 $(".e-list").stop().slideDown();
-            }, 200);
+            }, 100);
              if(e_button.hasClass("fa-angle-down")) {
                 e_button.removeClass("fa-angle-down");
                 e_button.addClass("fa-angle-up")
