@@ -422,14 +422,20 @@ section.content-intro {
     font-weight: 300;
 
 }
+#myTabContent p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+    font-size:14px;
+    color: black;
+} 
 
 .product-feature  .mytab .fatab {
     border: none;
 }
 
 .product-feature .tab-content{
-    max-width: 1280px;
-    margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 .product-feature  .mytab .nav-tabs>li>a,
@@ -455,6 +461,10 @@ section.content-intro {
     background-color: #ededed;
     display: inline-block;
     text-decoration: none;
+    font-size: 16px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 
