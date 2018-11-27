@@ -27,7 +27,7 @@ h2 {
 
 h3 {
     font-family: 'Roboto', sns-serif;
-    font-size:24px;
+    font-size: 24px;
     line-height: 1.4;
     font-weight: 300;
     letter-spacing: 0em;
@@ -92,20 +92,20 @@ section.content-intro {
     width: 100%;
 }
 
-.section-full{
+.section-full {
 
     width: 100%;
 }
 
-.content-rv-father{
+.content-rv-father {
     position: relative;
 
 }
 
-.content-rv-center{
+.content-rv-center {
 
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     right: 0;
     left: 0;
@@ -173,7 +173,7 @@ section.content-intro {
 }
 
 .m-dropdown .e-button {
-   
+
     transition: all 0.3s ease-in-out;
     font-size: 14px;
     font-size: 1.4rem;
@@ -402,13 +402,13 @@ section.content-intro {
 
 
 /*产品页面*/
-.product-feature{
-   
+.product-feature {
+
     background-color: #ededed;
 }
 
 .product-feature .mytab .nav-tabs,
-.product-feature .mytab .nav-tabs .tab{
+.product-feature .mytab .nav-tabs .tab {
     border-bottom: 0;
 }
 
@@ -422,32 +422,33 @@ section.content-intro {
     font-weight: 300;
 
 }
-#myTabContent p{
+
+#myTabContent p {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 
-    font-size:14px;
+    font-size: 14px;
     color: black;
-} 
+}
 
-.product-feature  .mytab .fatab {
+.product-feature .mytab .fatab {
     border: none;
 }
 
-.product-feature .tab-content{
+.product-feature .tab-content {
     padding-bottom: 50px;
 }
 
-.product-feature  .mytab .nav-tabs>li>a,
-.product-feature  .mytab .nav-tabs>li,
-{
+.product-feature .mytab .nav-tabs>li>a,
+.product-feature .mytab .nav-tabs>li,
+    {
     border: none;
     background-color: #ededed;
     text-decoration: none;
 
 }
 
-.product-feature  .mytab .nav li {
+.product-feature .mytab .nav li {
 
     display: flex;
     align-items: center;
@@ -456,7 +457,7 @@ section.content-intro {
     margin-bottom: 30px;
 }
 
-.product-feature  .mytab .nav li a {
+.product-feature .mytab .nav li a {
     border: none;
     background-color: #ededed;
     display: inline-block;
@@ -507,18 +508,21 @@ section.content-intro {
     }
 }
 
-.intro, .intro1 {
+.intro,
+.intro1 {
     height: 190px;
     width: 100%;
     position: relative;
     background-color: black;
 
 }
+
 .intro1 {
     background-color: #005697;
 }
 
-.intro .in1,  .intro1 .in2{
+.intro .in1,
+.intro1 .in2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -542,4 +546,39 @@ section.content-intro {
     letter-spacing: 0em;
     max-width: 650px;
 
+}
+
+.train-content-intro, .product-contact, .train-case-intro .v-300_action{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.train-content-intro p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
+
+}
+
+
+.product-contact button{
+    background-color:#005697;
+    font-size: 19px;
+    border: none;
+}
+
+.product-contact a {
+
+    color: #ffffff!important;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0em;
+    border-radius: 0.2em;
+    padding: 0.8em 1.5em;
+    background-color: #005697;
+    border-color: transparent;
+    box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4);
 }
